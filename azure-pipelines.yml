@@ -1,5 +1,6 @@
 # Docker
 
+
 # Build a Docker image
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
@@ -23,9 +24,9 @@ stages:
     steps:
     - task: Docker@2
       inputs:
-        containerRegistry: 'Docker Hub'
-        repository: 'prath7008/welcome:PPP'
-        command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'    
-        tags: |
+       containerRegistry: 'Docker Hub'
+       repository: 'prath7008/welcome:PPP'
+       command: 'buildAndPush'
+       Dockerfile: '**/Dockerfile'   
+       tags: |
           $(tag)
